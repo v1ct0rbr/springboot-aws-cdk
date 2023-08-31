@@ -9,8 +9,10 @@ import java.util.Arrays;
 public class SpringbootAwsCdk01App {
     public static void main(final String[] args) {
         App app = new App();
+        
+        new VpcStack(app, "Vpc");
 
-        new SpringbootAwsCdk01Stack(app, "SpringbootAwsCdk01Stack", StackProps.builder()
+      //  new SpringbootAwsCdk01Stack(app, "SpringbootAwsCdk01Stack", StackProps.builder()
                 // If you don't specify 'env', this stack will be environment-agnostic.
                 // Account/Region-dependent features and context lookups will not work,
                 // but a single synthesized template can be deployed anywhere.
@@ -34,7 +36,7 @@ public class SpringbootAwsCdk01App {
                 */
 
                 // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-                .build());
+              //  .build());
 
         app.synth();
     }
